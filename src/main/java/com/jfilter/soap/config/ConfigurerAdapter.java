@@ -12,7 +12,7 @@ import java.util.List;
 @SuppressWarnings("SpringJavaInjectionPointsAutowiringInspection")
 public class ConfigurerAdapter extends WsConfigurerAdapter {
 
-    private SoapEndpointInterceptor soapEndpointInterceptor;
+    private EndpointInterceptor endpointInterceptor;
     private FilterConfiguration filterConfiguration;
 
     @Autowired(required = false)
@@ -21,13 +21,13 @@ public class ConfigurerAdapter extends WsConfigurerAdapter {
     }
 
     @Autowired
-    public ConfigurerAdapter(SoapEndpointInterceptor soapEndpointInterceptor) {
-        this.soapEndpointInterceptor = soapEndpointInterceptor;
+    public ConfigurerAdapter(EndpointInterceptor endpointInterceptor) {
+        this.endpointInterceptor = endpointInterceptor;
     }
 
     @Override
     public void addInterceptors(List<EndpointInterceptor> interceptors) {
         if (filterConfiguration != null && filterConfiguration.isEnabled())
-            interceptors.add(soapEndpointInterceptor);
+            interceptors.add(endpointInterceptor);
     }
 }

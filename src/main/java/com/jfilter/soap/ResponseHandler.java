@@ -19,7 +19,7 @@ import java.lang.reflect.Method;
 import static com.jfilter.filter.FilterFields.EMPTY_FIELDS;
 
 @Component
-public class SoapFilter {
+public class ResponseHandler {
 
     private FilterProvider filterProvider;
     private DynamicFilterProvider dynamicFilterProvider;
@@ -40,7 +40,7 @@ public class SoapFilter {
         this.httpServletRequest = httpServletRequest;
     }
 
-    public boolean handleResponse(MessageContext messageContext, Object endpoint) throws Exception {
+    public boolean handleResponse(MessageContext messageContext, Object endpoint)  {
         MethodEndpoint methodEndpoint = (MethodEndpoint) endpoint;
         Method method = methodEndpoint.getMethod();
         MethodParameter methodParameter = new MethodParameter(method, 0);
