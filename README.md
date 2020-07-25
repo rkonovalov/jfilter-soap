@@ -21,3 +21,6 @@ For using this library you need to import dependency
 
 # Usage
 Details about usage could be found in manual https://rkonovalov.github.io/projects/jfilter/1.0.18/
+
+# Demo
+Demo project https://github.com/rkonovalov/jfilter-soap-draft
