@@ -11,6 +11,12 @@ For using this library you need to import dependency
     <artifactId>jfilter</artifactId>
     <version>1.0.18</version>
 </dependency>
+
+<dependency>
+    <groupId>com.github.rkonovalov</groupId>
+    <artifactId>jfilter-soap</artifactId>
+    <version>1.0.18</version>
+</dependency>
 ```
 
 # Usage
